@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang= "en">
+  <head>
+    <meta charset="utf-8">
+    <title>Success</title>
+    <meta name="description" content= "Insert description of webpage">
+  </head>
+  <body>
+    <div id="container">
+
+      <div class="title">
+        <a href="/logout">Logout</a></p>
+        <h2>Hello, {{user.alias}}!</h2>
+
+      </div>
+
+      <div class= "yourfriends">
+        <h4>Here is the list of your friends:</h4>
+
+        <table>
+          <tr>
+            <th>Alias</th>
+            <th>Action</th>
+          </tr>
+        {% for k in friend %}
+          <tr>
+            <td>{{k.alias}}</td>
+            <td><a href="/user/{{k.id}}">View Profile</a>
+              <a href="/remove/{{k.id}}">Remove as Friend</a>
+            </td>
+          </tr>
+        {% endfor %}
+        </table>
+      </div>
+
+      <div class="others">
+        <h4>Other User's not on your friend's list:</h4>
+        <table>
+          <tr>
+            <th>Alias</th>
+            <th>Action</th>
+          </tr>
+        {% for k in others %}
+          <tr>
+            <td><a href="/user/{{k.id}}">{{k.alias}}</a></td>
+            <td><a href='/add/{{k.id}}'><button>Add as Friend</button></a></td>
+          </tr>
+        {% endfor %}
+        </table>
+      </div>
+
+  </div>
+  </body>
+</html>
