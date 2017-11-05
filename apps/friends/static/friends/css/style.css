@@ -1,0 +1,131 @@
+*{
+  margin:0px;
+  padding:0px;
+  font-family: Arial;
+}
+
+#container{
+  margin:auto;
+  width:1000px;
+  padding: 20px;
+}
+
+/*--- Login/Registration ----*/
+.registration{
+  display: inline-block;
+  position: relative;
+  margin: 20px 50px 0px 0px;
+  padding: 20px;
+  width: 350px;
+  height: 220px;
+  border: 1px solid #ddd;
+}
+
+.loginbox{
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  margin-top: 20px;
+  padding: 20px;
+  width: 350px;
+  height: 150px;
+  border: 1px solid #ddd;
+}
+.errordisplay{
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+.registration h2{
+  margin-bottom: 10px;
+}
+.loginbox h2{
+  margin-bottom: 10px;
+}
+.registration form, .loginbox form{
+  text-align: left;
+}
+input{
+  width: 150px;
+  margin: 2px 5px;
+}
+.registration table, .loginbox table{
+  border: none;
+}
+.registration p{
+  margin:10px 0px 0px 143px;
+}
+.loginbox p{
+  margin:10px 0px 0px 82px;
+}
+/*--- Dashboard ----*/
+.title{
+  top: 10px;
+}
+.title a:link{
+  display: inline-block;
+  position: relative;
+  left:600px;
+}
+.title h2{
+  display: inline-block;
+  position: relative;
+}
+
+.yourfriends{
+  display: inline-block;
+  position: relative;
+  top: 10px;
+}
+.others{
+  display: inline-block;
+  position: relative;
+  top: 50px;
+}
+h4{
+  padding-bottom: 20px;
+}
+.yourfriends table {
+    border-collapse: collapse;
+    width: 700px;
+}
+
+.others table {
+    border-collapse: collapse;
+    width: 500px;
+}
+.others td, .yourfriends td{
+  text-align: left;
+  padding: 2px 10px 2px 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.others th, .yourfriends th{
+  text-align: left;
+  padding: 2px 20px 2px 5px;
+  border: 1px solid #ddd;
+  font-size:14px;
+  width: 25px;
+}
+
+button{
+  font-size: 12px;
+  background: #D2EEFF;
+  border: 1px solid #fff;
+  color: #000;
+  padding: 2px 5px;
+}
+.user a:link{
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  left:600px;
+}
+.user h2{
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+.user p{
+  padding-bottom: 10px;
+}

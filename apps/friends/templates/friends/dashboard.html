@@ -4,31 +4,32 @@
     <meta charset="utf-8">
     <title>Success</title>
     <meta name="description" content= "Insert description of webpage">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'friends/css/style.css' %}">
   </head>
   <body>
     <div id="container">
 
       <div class="title">
-        <a href="/logout">Logout</a></p>
-        <h2>Hello, {{user.alias}}!</h2>
-
+        <h2>Hello, {{user.alias | capfirst}}!</h2>
+        <a href="/logout">Logout</a>
       </div>
 
       <div class= "yourfriends">
         <h4>Here is the list of your friends:</h4>
-
         <table>
           <tr>
             <th>Alias</th>
             <th>Action</th>
           </tr>
-        {% for k in friend %}
+          {% for k in friend %}
           <tr>
-            <td>{{k.alias}}</td>
-            <td><a href="/user/{{k.id}}">View Profile</a>
-              <a href="/remove/{{k.id}}">Remove as Friend</a>
+            <td>{{k.alias | capfirst}}</td>
+            <td><a href="/user/{{k.id}}">View Profile</a>  |  <a href="/remove/{{k.id}}">Remove as Friend</a>
             </td>
           </tr>
+          {% empty %}
+          <p>You don't have friend's yet.</p>
         {% endfor %}
         </table>
       </div>
@@ -42,7 +43,7 @@
           </tr>
         {% for k in others %}
           <tr>
-            <td><a href="/user/{{k.id}}">{{k.alias}}</a></td>
+            <td><a href="/user/{{k.id}}">{{k.alias | capfirst }}</a></td>
             <td><a href='/add/{{k.id}}'><button>Add as Friend</button></a></td>
           </tr>
         {% endfor %}

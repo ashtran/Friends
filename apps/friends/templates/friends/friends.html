@@ -4,14 +4,16 @@
     <meta charset="utf-8">
     <title>Stalk other Users</title>
     <meta name="description" content= "Insert description of webpage">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'friends/css/style.css' %}">
   </head>
   <body>
     <div id="container">
 
-      <div class="title">
-        <p><a href="/friends">Home</a> <a href="/logout">Logout</a></p>
-        <h2>{{user.alias}}'s Profile</h2>
-        <p>Name: {{user.name}}</p>
+      <div class="user">
+        <a href="/friends">Home</a> <a href="/logout">Logout</a>
+        <h2>{{user.alias | capfirst }}'s Profile</h2>
+        <p>Name: {{user.name | capfirst}}</p>
         <p>Email: {{user.email}}</p>
       </div>
 

@@ -49,7 +49,7 @@ class UserManager(models.Manager):
                 if not field in errors and len(value) < 3:
                     errors[field]="{} field must be at least 3 characters".format(field.replace('_',' '))
                 elif not field in errors and not re.match(EMAIL_REGEX,post_data[field]):
-                    errors[field]="{} Invalid characters in { field}".format(field)
+                    errors[field]="Invalid characters in {}".format(field)
                 elif len(self.filter(email=post_data['email']))> 0:
                     errors[field]= "{} is already in use".format(field)
             if field == "dob":
