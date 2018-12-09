@@ -12,7 +12,7 @@ def index(request):
 def createuser(request):
     errors= User.objects.validate_registration(request.POST)
     if len(errors):
-        for field, message in errors.iteritems():
+        for field, message in errors.items():
             error(request, message, extra_tags=field)
         return redirect('/')
     else:
@@ -23,7 +23,7 @@ def createuser(request):
 def login(request):
     errors= User.objects.validate_login(request.POST)
     if len(errors):
-        for field, message in errors.iteritems():
+        for field, message in errors.items():
             error(request, message, extra_tags=field)
         return redirect('/')
     else:

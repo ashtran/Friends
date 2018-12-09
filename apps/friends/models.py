@@ -28,7 +28,7 @@ class UserManager(models.Manager):
 # <--- Validate User Registration---> #
     def validate_registration(self,post_data):
         errors={}
-        for field,value in post_data.iteritems():
+        for field,value in post_data.items():
             # <- Blank Entry -> #
             if len(value)<1:
                 errors[field]="{} field is required".format(field.replace('_',' '))
